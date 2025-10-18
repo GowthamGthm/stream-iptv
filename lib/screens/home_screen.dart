@@ -19,7 +19,7 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
 
       body: Container(
-        margin: const EdgeInsets.all(50.0),
+        margin: const EdgeInsets.all(15.0),
 
         child: Row(
           children: [
@@ -80,15 +80,58 @@ class _HomeScreenState extends State<HomeScreen> {
                   border: Border.all(color: Colors.black, width: 2.0),
                 ),
                 height: 200,
+
                 child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    ListTile(
-                      leading: Icon(Icons.home),
-                      title: Text('Playlists'),
+                    Container(
+                      padding: EdgeInsets.all(3.0),
+                      margin: EdgeInsets.only(top: 5.0, left: 5.0, right: 5.0),
+                      decoration: BoxDecoration(
+                        border: Border.all(color: Colors.black),
+                      ),
+                      child: Row(
+                        children: [Icon(Icons.home), Text('Playlist')],
+                      ),
                     ),
-                    ListTile(leading: Icon(Icons.home), title: Text('Home')),
-                    ListTile(leading: Icon(Icons.home), title: Text('Home')),
-                    ListTile(leading: Icon(Icons.home), title: Text('Home')),
+                    SizedBox(height: 10),
+                    Container(
+                      padding: EdgeInsets.all(3.0),
+                      margin: EdgeInsets.only(left: 5.0, right: 5.0),
+                      decoration: BoxDecoration(
+                        border: Border.all(color: Colors.black),
+                      ),
+                      child: Row(
+                        children: [Icon(Icons.home), Text('Settings')],
+                      ),
+                    ),
+                    SizedBox(height: 10),
+                    Container(
+                      padding: EdgeInsets.all(3.0),
+                      margin: EdgeInsets.only(left: 5.0, right: 5.0),
+                      decoration: BoxDecoration(
+                        border: Border.all(color: Colors.black),
+                      ),
+                      child: Row(
+                        children: [Icon(Icons.home), Text('Playlist')],
+                      ),
+                    ),
+                    SizedBox(height: 10),
+                    Container(
+                      padding: EdgeInsets.all(3.0),
+                      margin: EdgeInsets.only(
+                        bottom: 5.0,
+                        left: 5.0,
+                        right: 5.0,
+                      ),
+                      decoration: BoxDecoration(
+                        border: Border.all(color: Colors.black),
+                      ),
+                      child: Row(
+                        children: [Icon(Icons.home), Text('Playlist')],
+                      ),
+                    ),
+                    SizedBox(height: 10),
                   ],
                 ),
               ),
