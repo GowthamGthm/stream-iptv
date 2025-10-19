@@ -9,41 +9,32 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-
   @override
   void initState() {
-
     super.initState();
     // Set a timer for 3 seconds, then navigate to the HomeScreen
     Timer(const Duration(seconds: 3), () {
-      Navigator.pushReplacementNamed(context, '/settings');
+      // Navigator.pushReplacementNamed(context, '/home');
     });
-
   }
 
   @override
   Widget build(BuildContext context) {
-
-    return const Scaffold(
-      backgroundColor: Colors.blue, // Example background color
+    return Scaffold(
+      backgroundColor: Colors.white, // Example background color
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
+          
           children: [
-            FlutterLogo(size: 100),
-            SizedBox(height: 20),
-            Text(
-              'My Awesome App',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-              ),
+            Image.asset("assets/images/app_logo_no_bg.png", height: 300, width: 300),
+            const Text(
+              'Your Ultimate Streaming Companion',
+              style: TextStyle(color: Colors.black54, fontSize: 20 , fontWeight: FontWeight.bold),
             ),
           ],
         ),
       ),
     );
   }
-  
 }
